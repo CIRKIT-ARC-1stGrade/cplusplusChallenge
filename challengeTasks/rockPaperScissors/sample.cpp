@@ -18,16 +18,16 @@ int main() {
       {"s", Hand::scissor}, {"scissor", Hand::scissor}, {"choki", Hand::scissor} // specify of choki
   };
   const std::unordered_map<int, std::string> result_message {{0, "tie"}, {1, "win"}, {2, "lose"}}; // リザルトマップ
-  std::random_device seed_generator; // 乱数(動作が遅い)
-  std::default_random_engine rand_engine(seed_generator()); // 擬似乱数(早い)　乱数で擬似乱数を初期化することで乱数とみなせる
-  std::uniform_int_distribution<> dist(0, 2); // 一様分布 [0, 2]
+  std::random_device seed_generator {}; // 乱数(動作が遅い)
+  std::default_random_engine rand_engine {seed_generator()}; // 擬似乱数(早い)　乱数で擬似乱数を初期化することで乱数とみなせる
+  std::uniform_int_distribution<> dist {0, 2}; // 一様分布 [0, 2]
 
   while (true) { // forever
     Hand user_hand;
 
     {
       std::cout << "Input your hand!\n > " << std::flush; // ユーザに入力を促す
-      std::string your_input;
+      std::string your_input {};
       std::cin >> your_input; // 入力を受け取る
 
       try {
