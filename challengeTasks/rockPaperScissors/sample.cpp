@@ -11,7 +11,8 @@ enum class Hand : char
   scissor = 2,
 };
 
-int main() {
+int main(int argc, char** argv)
+{
   const std::unordered_map<std::string, Hand> valid_input_map { // ユーザ入力マップ
       {"r", Hand::rock}, {"rock", Hand::rock}, {"gu", Hand::rock}, // specify of rock
       {"p", Hand::paper}, {"paper", Hand::paper}, {"pa", Hand::paper}, // specify of paper
