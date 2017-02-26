@@ -16,12 +16,12 @@ g++ -std=c++14 sample.cpp
 ## 課題内容
 
 1. じゃんけんゲーム  ☆☆
-  rockPaperScissors/
+  - rockPaperScissors/
 2. アルファベットを並び替え  ☆
-  yourName/
+  - yourName/
 3. 入力した数字以下の素数を出力  ☆☆
-  primeNumber/
+  - primeNumber/
 4. フルーツの名前を辞書順に並び替え  ☆☆
-  dictionary/
+  - dictionary/
 5. インデンター(フォーマッター)  ☆☆☆☆☆
-  codeFormater/  
+  - codeFormater/  
