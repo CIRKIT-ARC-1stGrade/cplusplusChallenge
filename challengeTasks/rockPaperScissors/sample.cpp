@@ -11,15 +11,15 @@ enum class Hand : char
   scissor = 2,
 };
 
-  const std::unordered_map<std::string, Hand> valid_input_map { // ユーザ入力マップ
-      {"r", Hand::rock}, {"rock", Hand::rock}, {"gu", Hand::rock}, // specify of rock
-      {"p", Hand::paper}, {"paper", Hand::paper}, {"pa", Hand::paper}, // specify of paper
-      {"s", Hand::scissor}, {"scissor", Hand::scissor}, {"choki", Hand::scissor} // specify of choki
-  };
-  const std::unordered_map<int, std::string> result_message {{0, "tie"}, {1, "win"}, {2, "lose"}}; // リザルトマップ
-  std::random_device seed_generator {}; // 乱数(動作が遅い)
-  std::default_random_engine rand_engine {seed_generator()}; // 擬似乱数(早い)　乱数で擬似乱数を初期化することで乱数とみなせる
-  std::uniform_int_distribution<> dist {0, 2}; // 一様分布 [0, 2]
+const std::unordered_map<std::string, Hand> valid_input_map { // ユーザ入力マップ
+    {"r", Hand::rock}, {"rock", Hand::rock}, {"gu", Hand::rock}, // specify of rock
+    {"p", Hand::paper}, {"paper", Hand::paper}, {"pa", Hand::paper}, // specify of paper
+    {"s", Hand::scissor}, {"scissor", Hand::scissor}, {"choki", Hand::scissor} // specify of choki
+};
+const std::unordered_map<int, std::string> result_message {{0, "tie"}, {1, "win"}, {2, "lose"}}; // リザルトマップ
+std::random_device seed_generator {}; // 乱数(動作が遅い)
+std::default_random_engine rand_engine {seed_generator()}; // 擬似乱数(早い)　乱数で擬似乱数を初期化することで乱数とみなせる
+std::uniform_int_distribution<> dist {0, 2}; // 一様分布 [0, 2]
 
 int main(int argc, char** argv)
 {
