@@ -26,17 +26,15 @@ int main(int argc, char** argv)
   while (true) { // forever
     Hand user_hand;
 
-    {
-      std::cout << "Input your hand!\n > " << std::flush; // ユーザに入力を促す
-      std::string your_input {};
-      std::cin >> your_input; // 入力を受け取る
+    std::cout << "Input your hand!\n > " << std::flush; // ユーザに入力を促す
+    std::string your_input {};
+    std::cin >> your_input; // 入力を受け取る
 
-      try {
-        user_hand = valid_input_map.at(your_input); // valid_input_mapから入力された手を探す
-      } catch(const std::out_of_range&) { // もしvalid_input_mapに存在しなければこっち
-        std::cout << "Your input is wrong" << std::endl;
-        continue; // continue "Input your hand!\n > "
-      }
+    try {
+      user_hand = valid_input_map.at(your_input); // valid_input_mapから入力された手を探す
+    } catch(const std::out_of_range&) { // もしvalid_input_mapに存在しなければこっち
+      std::cout << "Your input is wrong" << std::endl;
+      continue; // continue "Input your hand!\n > "
     }
 
     auto enemy_hand {dist(rand_engine)}; // 擬似乱数を用いて一様分布を生成
