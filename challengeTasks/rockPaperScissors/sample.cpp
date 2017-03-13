@@ -28,8 +28,10 @@ int main(int argc, char** argv)
     std::cin >> your_input; // 入力を受け取る
 
     auto it = valid_input_map.find(your_input); // valid_input_mapから入力された手を探す
-    if (it == valid_input_map.end()) // not found
+    if (it == valid_input_map.end()) { // not found
+      std::cout << "Your input is false!" << std::endl;
       continue; // back to "Input your hand!"
+    }
 
     auto user_hand = it->second; // get your input.
 
