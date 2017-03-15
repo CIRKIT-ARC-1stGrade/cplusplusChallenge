@@ -29,7 +29,7 @@ int main(int argc, char** argv)
       // above mean every prime are that (i % prime) is not 0.
       // 訳:今まで見つかった全ての素数で割り切れなければ素数.
       primes.push_back(i); // add found prime
-      std::cout << i << " is prime.\n"; // tell the prime.
+      std::cout << i << '\n'; // tell the prime.
     }
   std::cout << std::flush;
   return 0;
