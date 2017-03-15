@@ -12,6 +12,8 @@ void show_help(const char* prog_name)
 
 int main(int argc, char** argv)
 {
+  std::ios_base::sync_with_stdio(false); // for runtime speed.
+
   if (argc < 2) { // need argv[1] for search limit.
     show_help(*argv);
     return 0;
