@@ -22,6 +22,7 @@ int main(int argc, char** argv)
   if (limit < 2) return 0; // non-exist prime.
 
   std::vector<std::uintmax_t> primes {2}; // 2 is prime.
+  std::cout << "2\n";
 
   for (std::uintmax_t i {3}; i <= limit; i += 2) // search prime. (if limit is 2, not into loop)
     if (std::all_of(primes.begin(), primes.end(), [i](auto prime){return i % prime;})) {
