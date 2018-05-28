@@ -7,14 +7,12 @@
 
 using namespace std;
 
-template<typename T>
-constexpr auto check(const vector<bitset<32>>& pflag, const T& n)
+inline auto check(const vector<bitset<32>>& pflag, uint64_t n)
 {
   return pflag[n >> 6].test((n >> 1) & 0x1f);
 }
 
-template<typename T>
-constexpr void set(vector<bitset<32>>& pflag, const T& n)
+inline void set(vector<bitset<32>>& pflag, uint64_t n)
 {
   pflag[n >> 6].set((n >> 1) & 0x1f);
 }
